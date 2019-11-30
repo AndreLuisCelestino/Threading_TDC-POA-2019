@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{84EEBE8F-B698-46C9-9920-5EBE13A45D19}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="01 - TThread\TThread.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="02 - AnonymousThread\AnonymousThread.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="03 - IFuture\IFuture.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="04 - TParallel\TParallel.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="05 - TTask\TTask.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TThread">
+        <MSBuild Projects="01 - TThread\TThread.dproj"/>
+    </Target>
+    <Target Name="TThread:Clean">
+        <MSBuild Projects="01 - TThread\TThread.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TThread:Make">
+        <MSBuild Projects="01 - TThread\TThread.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnonymousThread">
+        <MSBuild Projects="02 - AnonymousThread\AnonymousThread.dproj"/>
+    </Target>
+    <Target Name="AnonymousThread:Clean">
+        <MSBuild Projects="02 - AnonymousThread\AnonymousThread.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnonymousThread:Make">
+        <MSBuild Projects="02 - AnonymousThread\AnonymousThread.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IFuture">
+        <MSBuild Projects="03 - IFuture\IFuture.dproj"/>
+    </Target>
+    <Target Name="IFuture:Clean">
+        <MSBuild Projects="03 - IFuture\IFuture.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IFuture:Make">
+        <MSBuild Projects="03 - IFuture\IFuture.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TParallel">
+        <MSBuild Projects="04 - TParallel\TParallel.dproj"/>
+    </Target>
+    <Target Name="TParallel:Clean">
+        <MSBuild Projects="04 - TParallel\TParallel.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TParallel:Make">
+        <MSBuild Projects="04 - TParallel\TParallel.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TTask">
+        <MSBuild Projects="05 - TTask\TTask.dproj"/>
+    </Target>
+    <Target Name="TTask:Clean">
+        <MSBuild Projects="05 - TTask\TTask.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TTask:Make">
+        <MSBuild Projects="05 - TTask\TTask.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TThread;AnonymousThread;IFuture;TParallel;TTask"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TThread:Clean;AnonymousThread:Clean;IFuture:Clean;TParallel:Clean;TTask:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TThread:Make;AnonymousThread:Make;IFuture:Make;TParallel:Make;TTask:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
