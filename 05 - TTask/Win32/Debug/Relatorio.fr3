@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="6.2.1" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="167935" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="43776,8988706134" ReportOptions.Description.Text="" ReportOptions.LastChange="43776,9340393981" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" Frame.Typ="0" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="45,35436" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Align="baCenter" AllowVectorExport="True" Left="245,66945" Top="3,77953" Width="226,7718" Height="34,01577" Font.Charset="1" Font.Color="0" Font.Height="-27" Font.Name="Tahoma" Font.Style="0" Frame.Typ="0" HAlign="haCenter" ParentFont="False" Text="Relatório"/>
+    </TfrxReportTitle>
+    <TfrxPageHeader Name="PageHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="222,99227" Left="0" Top="86,92919" Width="718,1107">
+      <TfrxMemoView Name="Texto" AllowVectorExport="True" Left="3,77953" Top="7,55906" Width="699,21305" Height="192,75603" Font.Charset="1" Font.Color="0" Font.Height="-20" Font.Name="Tahoma" Font.Style="0" Frame.Typ="0" ParentFont="False" Text=""/>
+    </TfrxPageHeader>
+  </TfrxReportPage>
+</TfrxReport>

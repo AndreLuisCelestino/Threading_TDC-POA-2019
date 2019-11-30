@@ -1,0 +1,20 @@
+{TODO :var
+  Tasks: array [0..2] of ITask;
+  LStopWatch: TStopWatch;
+begin
+  LStopWatch := TStopwatch.StartNew;
+  Tasks[0] := TTask.Create(ConsultarDadosCliente);
+  Tasks[0].Start;
+
+  Tasks[1] := TTask.Create(ConsultarDadosPedido);
+  Tasks[1].Start;
+
+  Tasks[2] := TTask.Create(ConsultarDadosItensPedido);
+  Tasks[2].Start;
+
+  LStopWatch.Stop;
+  ShowMessage(LStopWatch.Elapsed.ToString);
+
+  (frxReport.FindObject('Texto') as TfrxMemoView).Text := FTexto.ToString;
+  frxReport.ShowReport();
+end;}
